@@ -1,0 +1,6 @@
+{
+  // "workbench.colorTheme": "Laravel Docs Color"
+  "workbench.iconTheme": "vscode-icons",
+  "editor.formatOnSave": true,
+  "blade.format.enable": true
+}

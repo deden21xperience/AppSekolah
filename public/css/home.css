@@ -1,0 +1,15 @@
+/* for all version or Mobile version */
+.panel {
+    display: none;
+    /* bottom: 0;
+    width: 100% */
+}
+
+
+/* Desktop version */
+@media(min-width:992px){
+     .costum-btn-tab{
+        top: 15px;
+        right: 20px;
+    }
+}
