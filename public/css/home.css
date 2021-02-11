@@ -1,15 +1,26 @@
 /* for all version or Mobile version */
+@media(max-width:500px){
 .panel {
-    display: none;
-    /* bottom: 0;
-    width: 100% */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 320px;
+    z-index:99999;
+    padding: 0
 }
-
+.panel ul {
+    display: inline-block;
+    width: 100%
+}
+}
 
 /* Desktop version */
 @media(min-width:992px){
      .costum-btn-tab{
         top: 15px;
         right: 20px;
+    }
+    .content{
+        margin-top: 52px;
     }
 }

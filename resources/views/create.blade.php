@@ -186,13 +186,13 @@
             <div class="form-group">
               <div class="row">
                 <div class="col-sm-6">
-                  <label for="">password</label>
+                  <label for="password1">password</label>
                   <input required type="password" class="form-control disable" name="password1">
-                  <small>masukan password anda</small>
+                  <small class="text-muted" >masukan password anda</small>
                 </div>
                 <div class="col-sm-6">
-                  <label for="">ulangi password</label>
-                  <input required type="password" class="form-control disable" name="password2">
+                  <label for="password2">ulangi password</label>
+                  <input required type="password" class="form-control text-muted" name="password2">
                 </div>
               </div>
             </div>

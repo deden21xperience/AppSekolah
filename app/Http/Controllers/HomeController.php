@@ -38,4 +38,9 @@ class HomeController extends Controller
         $progres = 35; //rubah di database
         return view('profile', compact('student', 'progres'));
     }
+
+     public function update(Request $request, $id)
+    {
+        dd('hello world');
+    }
 }

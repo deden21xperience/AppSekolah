@@ -162,7 +162,7 @@ class PPDBController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd('hello world');
     }
 
     /**

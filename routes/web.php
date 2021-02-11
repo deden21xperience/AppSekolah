@@ -44,7 +44,7 @@ Auth::routes(['register' => false]);
 //     return $jobs;
 // });
 
-Route::view('/vue', 'tes');
+// Route::view('/vue', 'tes');
 Route::get('/tes', function () {
 
   // echo url()->current();
@@ -114,8 +114,9 @@ Route::get('/tes', function () {
 
 /* -----------------PPDB ROUTE AS GUEST---------------------*/
 Route::view('/', 'ppdb');
-Route::get('/daftar', 'PPDBController@create')->name('register_ppdb');
-Route::post('/daftar', 'PPDBController@store')->name('store_ppdb');
+Route::get('/casis/daftar', 'PPDBController@create')->name('register_ppdb');
+Route::post('/casis/daftar', 'PPDBController@store')->name('store_ppdb');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 /* -----------------USERS HAS ROLES AND PERMISSIONS---------------------*/
@@ -130,7 +131,8 @@ Route::group(['middleware' => ['role:operator']], function () {
   Route::post('/home/role/create', 'RoleManagementController@store')->name('create_role');
   Route::delete('/home/role/{id}', 'RoleManagementController@destroy')->name('delete_role');
 });
-Route::get('/home/{profile}/edit', 'HomeController@edit')->name('edit_profile_home');
+Route::get('/home/profile/{profile}/edit', 'HomeController@edit')->name('edit_profile_home');
+Route::patch('/home/profile/{profile}', 'HomeController@update')->name('update_profile_home');
 Route::get('/home/users', 'HomeController@users')->name('home_users');
 
 

@@ -20,7 +20,6 @@
       <h5>Data Anda belum lengkap, silahkan lengkapi, clik tombol lengkapi untuk melanjutkan</h5>
       @role('casis')
       <p> No. Pendaftaran Anda: <b>{{ Auth::user()->userable->no_pendaftaran}}</b></p>
-      @endrole
       <a href="{{ route('edit_profile_home', Auth::user()->id) }}" class="btn btn-primary">Lengkapi</a>
     </div>
   </div>
@@ -37,20 +36,23 @@
     </div>
   </div>
 </div>
+@endrole
 {{-- @else --}}
 
 @role('operator')
-<div class="col-lg-3 col-6">
-  <!-- small box -->
-  <div class="small-box bg-warning">
-    <div class="inner">
-      <h3>{{ \App\Student::where('status',0)->count() }}</h3>
-      <p>Casis Mendaftar</p>
+<div class="row">
+  <div class="col-lg-3 col-6">
+    <!-- small box -->
+    <div class="small-box bg-warning">
+      <div class="inner">
+        <h3>{{ \App\Student::where('status',0)->count() }}</h3>
+        <p>Casis Mendaftar</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-person-add"></i>
+      </div>
+      <a href="{{Route('data_ppdb')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
-    <div class="icon">
-      <i class="ion ion-person-add"></i>
-    </div>
-    <a href="{{Route('data_ppdb')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
   </div>
 </div>
 @endrole

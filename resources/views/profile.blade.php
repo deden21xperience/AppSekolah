@@ -17,7 +17,28 @@
         @include('utilities.progressbar')
       </div>
       <div class="card">
-        <div class="card-header">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+              aria-controls="nav-home" aria-selected="true">Home</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+              aria-controls="nav-profile" aria-selected="false">Profile</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+              aria-controls="nav-contact" aria-selected="false">Contact</a>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            home
+          </div>
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            @include('contents.data-ibu')
+          </div>
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            contact
+          </div>
+        </div>
+        {{-- <div class="card-header">
           <div id="costum-tab">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item" role="presentation">
@@ -39,30 +60,30 @@
             </ul>
           </div>
         </div>
-        <div class="card-body">
-          <form method="post" action="">
-            @method('patch')
-            @csrf
-            <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="data-diri" role="tabpanel" aria-labelledby="data-diri-tab">
-                @include('contents.data-diri')
-              </div>
-              <div class="tab-pane fade" id="data-ayah" role="tabpanel" aria-labelledby="data-ayah-tab">
-                @include('contents.data-ayah')
-              </div>
-              <div class="tab-pane fade" id="data-ibu" role="tabpanel" aria-labelledby="data-ibu-tab">
-                @include('contents.data-ibu')
-              </div>
+        <div class="card-body"> --}}
+        {{-- <form method="post" action="{{ route ('update_profile_home', auth()->user()->id)}}">
+        @method('patch')
+        @csrf --}}
+        {{-- <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="data-diri" role="tabpanel" aria-labelledby="data-diri-tab">
+              @include('contents.data-diri')
             </div>
+            <div class="tab-pane fade" id="data-ayah" role="tabpanel" aria-labelledby="data-ayah-tab">
+              @include('contents.data-ayah')
+            </div>
+            <div class="tab-pane fade" id="data-ibu" role="tabpanel" aria-labelledby="data-ibu-tab">
+              @include('contents.data-ibu')
+            </div>
+          </div>
         </div>
         <div>
           <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan Perubahan</button>
-        </div>
-        </form>
+        </div> --}}
+        {{-- </form> --}}
+        {{-- </div> --}}
       </div>
     </div>
   </div>
-</div>
 </div>
 
 @section('costum-script')

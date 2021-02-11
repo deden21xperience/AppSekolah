@@ -207,8 +207,8 @@
   </div>
 </div>
 <div class="form-group">
-  <small class="form-text disabled">Jika mempunyai KIP, Silahkan diisi</small>
-  <label for="">No.KIP</label>
+  <label for="">No. KIP:</label>
+  <small class="form-text text-muted">Jika mempunyai KIP, Silahkan diisi</small>
   <input type="text" class="form-control">
 </div>
 

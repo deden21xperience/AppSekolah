@@ -1,6 +1,23 @@
 {
-  // "workbench.colorTheme": "Laravel Docs Color"
-  "workbench.iconTheme": "vscode-icons",
-  "editor.formatOnSave": true,
-  "blade.format.enable": true
+    // "workbench.colorTheme": "Laravel Docs Color",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnSave": true,
+    "php.validate.executablePath": "C:\\laragon\\bin\\php\\php-7.2.11-Win32-VC15-x86\\php.exe",
+    "php.executablePath": "C:\\laragon\\bin\\php\\php-7.2.11-Win32-VC15-x86\\php.exe",
+    "php.suggest.basic": false,
+    "php.validate.run": "onType",
+    "laravel_goto_view.extensions": [
+        ".blade.php",
+        ".vue",
+        "php"
+    ],
+    "laravel_goto_view.folderTip": true,
+    "laravel_goto_view.maxLinesCount": 666,
+    "laravel_goto_view.quickJump": true,
+    "laravel_goto_view.regex": "(?<=view\\(|@include\\(|@extends\\(|@component\\(|Inertia::render\\()(['\"])[^'\"]*\\1",
+    "laravel_goto_view.folders": {
+        "default": "/resources/views",
+        "js": "/resources/js/Pages",
+        "vendor": "/resources/views/vendor"
+    },
 }
